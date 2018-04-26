@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/transition_gradient">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/polygon_mountain" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout">
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/label_kalassist"/>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="25dp"
+                    android:alpha="0.6"
+                    android:layout_gravity="center"
+                    android:src="@drawable/label_register"
+                    android:layout_marginBottom="25dp"/>
+
+                <EditText
+                    android:id="@+id/editText_email"
+                    android:layout_width="315dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparentWhite"
+                    android:hint="@string/login_email"
+                    android:inputType="textEmailAddress"
+                    android:padding="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:id="@+id/editText_username"
+                    android:layout_width="315dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparentWhite"
+                    android:hint="@string/login_username"
+                    android:padding="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:id="@+id/editText_password"
+                    android:layout_width="315dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransparentWhite"
+                    android:hint="@string/login_password"
+                    android:padding="5dp"
+                    android:inputType="textPassword"
+                    android:layout_marginBottom="15dp"/>
+
+                <!--<Button-->
+                    <!--android:id="@+id/button_register"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Registrieren"-->
+                    <!--android:textColor="@color/colorTransparentBlack"/>-->
+
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/button_register"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="7dp"
+                    android:layout_marginTop="10dp"
+                    fancy:fb_defaultColor="@color/colorTransparentWhite"
+                    fancy:fb_focusColor="@color/colorWhite"
+                    fancy:fb_textColor="#000000"
+                    fancy:fb_iconPosition="left"
+                    fancy:fb_radius="30dp"
+                    fancy:fb_text="Registrieren" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

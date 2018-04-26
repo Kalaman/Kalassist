@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#41C4D1</color>
+    <color name="colorPrimaryDark">#3ab0bc</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorAccent">#1CD8D2</color>
+
+    <color name="colorTurkis">#24C6DC</color>
+    <color name="colorPurple">#514a9d</color>
+    <color name="colorTurkisTransparent">#BB24C6DC</color>
+
+    <color name="colorSeaBliz1">#1CD8D2</color>
+    <color name="colorSeaBliz2">#93EDC7</color>
+
+    <color name="colorElectricViolet1">#4776E6</color>
+    <color name="colorElectricViolet2">#8E54E9</color>
+    <color name="colorElectricVioletTransparent2">#BB8E54E9</color>
+
+    <color name="colorElectricViolet3">#4F81F8</color>
+    <color name="colorElectricViolet4">#8749E8</color>
+
+    <color name="colorViolet1">#1894ff</color>
+    <color name="colorViolet2">#cd25ff</color>
+
+    <color name="colorViolet3">#506dff</color>
+    <color name="colorViolet4">#ec6fff</color>
+
+    <color name="colorNeonLife1">#B3FFAB</color>
+    <color name="colorNeonLife2">#12FFF7</color>
+
+    <color name="colorTeaLove1">#AAFFA9</color>
+    <color name="colorTeaLove2">#11FFBD</color>
+
+    <color name="colorTransparentBlack">#90000000</color>
+    <color name="colorTransparentWhite">#90FFFFFF</color>
+</resources>
