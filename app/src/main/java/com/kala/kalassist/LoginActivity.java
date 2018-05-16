@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity  implements DatabaseActions
     CheckBox checkBoxRememberMe;
     PrefManager prefManager;
 
-    public static String savedUsername;
+    public static String clientUsername;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,12 +42,12 @@ public class LoginActivity extends AppCompatActivity  implements DatabaseActions
 
         prefManager = new PrefManager(this);
 
-        savedUsername = prefManager.readSharedString(PrefManager.KEY_USERNAME);
+        clientUsername = prefManager.readSharedString(PrefManager.KEY_USERNAME);
         String savedPassword = prefManager.readSharedString(PrefManager.KEY_PASSWORD);
 
         //Wenn es bereits gespeicherte Anmeldedaten gibt, nutze sie
-        if (!savedUsername.equals("")) {
-            editTextUsername.setText(savedUsername);
+        if (!clientUsername.equals("")) {
+            editTextUsername.setText(clientUsername);
             editTextPassword.setText(savedPassword);
 
             editTextUsername.setSelection(editTextUsername.getText().length());
@@ -121,6 +121,7 @@ public class LoginActivity extends AppCompatActivity  implements DatabaseActions
     @Override
     public void onDBRequestFinished(String response) {
         if (response.equals("LOGIN OK")) {
+            clientUsername = editTextUsername.getText().toString();
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

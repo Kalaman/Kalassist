@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.kala.kalassist.DatabaseActions;
 import com.kala.kalassist.LoginActivity;
-import com.kala.kalassist.MainActivity;
 import com.kala.kalassist.R;
 import com.kala.kalassist.SpeechCommand;
 import com.kala.kalassist.SpeechCommandControlller;
@@ -36,7 +35,7 @@ public class LearnCommand extends SpeechCommand {
                 answer = null;
                 SpeechCommandControlller.DIALOG_MODE = false;
                 if (dbSuccess)
-                    return "Ich habs mir gemerkt, " + LoginActivity.savedUsername;
+                    return "Ich habs mir gemerkt, " + LoginActivity.clientUsername;
                 else
                     return "Aufgrund eines Unbekannten Fehlers konnte ich mir das nicht merken";
             }

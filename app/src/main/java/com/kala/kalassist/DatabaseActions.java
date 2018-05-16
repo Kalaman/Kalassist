@@ -7,7 +7,6 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 import com.kala.kalassist.Commands.CommunityCommand;
-import com.kala.kalassist.Commands.DefaultCommand;
 
 import org.json.JSONObject;
 
@@ -19,7 +18,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.concurrent.Executor;
 
 /**
  * Created by Kalaman on 30.12.2017.
@@ -27,7 +25,7 @@ import java.util.concurrent.Executor;
 
 public class DatabaseActions {
 
-    private static final String DATABASE_IP = "192.168.0.136";
+    private static final String DATABASE_IP = "192.168.0.137";
     //private static final String DATABASE_IP = "192.168.43.246";
     private static final String DATABASE_URL_REGISTER = "http://"+ DATABASE_IP + "/kalassist/db/db_register.php";
     private static final String DATABASE_URL_LOGIN = "http://"+ DATABASE_IP + "/kalassist/db/db_login.php";
@@ -66,7 +64,7 @@ public class DatabaseActions {
 
     public static boolean savePhrase (String question, String answer, Context context) {
         String [] paramsKey = new String[] {"username","question","answer"};
-        String [] paramsValue = new String[] {LoginActivity.savedUsername,question.toLowerCase(),answer};
+        String [] paramsValue = new String[] {LoginActivity.clientUsername,question.toLowerCase(),answer};
 
         try {
             String resp = new DBAsyncRequest(context,null,DATABASE_URL_SAVE_PHRASE).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,paramsKey,paramsValue).get();
@@ -82,7 +80,7 @@ public class DatabaseActions {
 
     public static void reportPhrase (String tpid,Context context, DBRequestListener listener) {
         String [] paramsKey = new String[] {"username","tpid"};
-        String [] paramsValue = new String[] {LoginActivity.savedUsername,tpid};
+        String [] paramsValue = new String[] {LoginActivity.clientUsername,tpid};
 
         listeners.add(listener);
         new DBAsyncRequest(context,null,DATABASE_URL_REPORT_PHRASE).execute(paramsKey,paramsValue);
